@@ -1,0 +1,8 @@
+<br>
+<h5>Books List</h5>
+
+  <ul class="items">
+    <li *ngFor="let book of books; let i = index" class="table">
+      <span class="badge">{{book.id}}</span><p (click)="onSelect(book)">{{book.name}}</p><span class="badge" (click)="remove(i)">X</span>
+    </li>
+  </ul>

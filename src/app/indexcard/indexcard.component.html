@@ -1,0 +1,9 @@
+<br>
+<p>Book Details</p>
+<br>
+<!-- <h4>B0ook with id: {{bookId}}, selected</h4> -->
+<div *ngIf="bookId; else elseBlock">
+    <h4>Book with id: {{bookId}}, libro: {{bookNombre}} ,autor: <span class="autor" (click)="onSelect(bookIdAutor)">{{bookAutor}}</span></h4>
+    <img src={{bookImg}} style="width:200px;height:300px;">
+</div>
+<ng-template #elseBlock>No ha selecciona un libro</ng-template>

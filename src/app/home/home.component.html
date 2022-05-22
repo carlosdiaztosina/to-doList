@@ -1,0 +1,31 @@
+
+ <div>
+     <h3>Numero de libros guardados: {{arrayLibro.books.length}}</h3>
+    <form>
+        <div class="mb-3">
+          <label for="nombreLibro" class="form-label">Nombre del libro</label>
+          <input type="text" class="form-control" id="nombreLibro" >
+        </div>
+        <div class="mb-3">
+            <label for="autorLibro" class="form-label">Autor del libro</label>
+            <input type="text" class="form-control" id="autorLibro" >
+        </div>
+        <div class="mb-3">
+            <label for="imagenLibro" class="form-label">Url de la imagen del libro</label>
+            <input type="text"  class="form-control" id="imagenLibro">
+        </div>
+        <button type="submit" (click)="addBook()" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- <form >
+        <label for="name">First Name: </label>
+        <input id="name" type="text" formControlName="name">
+      
+        <label for="autorName">Last Name: </label>
+        <input id="autorName" type="text" formControlName="autorName">
+    
+        <p>Complete the form to enable button.</p>
+        <button (click)="onSubmit()">Submit</button>
+      </form> -->
+      
+ </div>
+  

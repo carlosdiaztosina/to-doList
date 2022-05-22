@@ -1,0 +1,31 @@
+
+<div *ngIf="bookId; else elseBlock">
+    <h3 class="my-1">Escritor: {{bookAutor}} </h3>
+    <table class="table table-white table-hover">
+        <thead>
+          <tr>
+            <th >Libros</th>
+            <th >Imagen</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lista of list">
+                <td>{{lista.name}}</td>
+                <td><img loading="lazy" src={{lista.img}} style="width:90px;height:120px;"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <div *ngFor="let lista of array">
+        <h4>autor: <span class="autor">{{lista.name}}</span>, libro: {{bookNombre}}</h4>
+        <img src={{bookImg}} style="width:200px;height:300px;">
+    </div> -->
+</div>
+<ng-template #elseBlock>
+    <ul class="items">
+        <h2>Lista de Autores </h2>
+        
+        <li *ngFor="let autor of autores; let i = index" class="tables">
+          <span class="badge">{{autor.id}}</span><p (click)="onSelect(autor)">{{autor.name}}</p><span class="badge" (click)="remove(i)">X</span>
+        </li>
+    </ul>
+</ng-template>
